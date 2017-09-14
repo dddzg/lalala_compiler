@@ -13,10 +13,62 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="antlr">
+      <UniqueIdentifier>{b6407a75-4d6b-4117-97ee-bfa86ab5237c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="antlr\JSONBaseListener.cpp">
+      <Filter>antlr</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\JSONBaseVisitor.cpp">
+      <Filter>antlr</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\JSONLexer.cpp">
+      <Filter>antlr</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\JSONListener.cpp">
+      <Filter>antlr</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\JSONParser.cpp">
+      <Filter>antlr</Filter>
+    </ClCompile>
+    <ClCompile Include="antlr\JSONVisitor.cpp">
+      <Filter>antlr</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="antlr\JSON.g4">
+      <Filter>antlr</Filter>
+    </None>
+    <None Include="antlr\JSON.tokens">
+      <Filter>antlr</Filter>
+    </None>
+    <None Include="antlr\JSONLexer.tokens">
+      <Filter>antlr</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="antlr\JSONBaseListener.h">
+      <Filter>antlr</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\JSONBaseVisitor.h">
+      <Filter>antlr</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\JSONLexer.h">
+      <Filter>antlr</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\JSONListener.h">
+      <Filter>antlr</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\JSONParser.h">
+      <Filter>antlr</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\JSONVisitor.h">
+      <Filter>antlr</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
