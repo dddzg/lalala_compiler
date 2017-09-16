@@ -140,31 +140,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="antlr\JSONBaseListener.cpp" />
-    <ClCompile Include="antlr\JSONBaseVisitor.cpp" />
-    <ClCompile Include="antlr\JSONLexer.cpp" />
-    <ClCompile Include="antlr\JSONListener.cpp" />
-    <ClCompile Include="antlr\JSONParser.cpp" />
-    <ClCompile Include="antlr\JSONVisitor.cpp" />
+    <ClCompile Include="antlr\DZGBaseListener.cpp" />
+    <ClCompile Include="antlr\DZGBaseVisitor.cpp" />
+    <ClCompile Include="antlr\DZGLexer.cpp" />
+    <ClCompile Include="antlr\DZGListener.cpp" />
+    <ClCompile Include="antlr\DZGParser.cpp" />
+    <ClCompile Include="antlr\DZGVisitor.cpp" />
     <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="antlr\JSON.g4" />
-    <None Include="antlr\JSON.tokens" />
-    <None Include="antlr\JSONLexer.tokens" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="antlr\JSONBaseListener.h" />
-    <ClInclude Include="antlr\JSONBaseVisitor.h" />
-    <ClInclude Include="antlr\JSONLexer.h" />
-    <ClInclude Include="antlr\JSONListener.h" />
-    <ClInclude Include="antlr\JSONParser.h" />
-    <ClInclude Include="antlr\JSONVisitor.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="G:\antlr4-master\runtime\Cpp\runtime\antlr4cpp-vs2015.vcxproj">
       <Project>{a9762991-1b57-4dce-90c0-ee42b96947be}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="antlr\DZGBaseListener.h" />
+    <ClInclude Include="antlr\DZGBaseVisitor.h" />
+    <ClInclude Include="antlr\DZGLexer.h" />
+    <ClInclude Include="antlr\DZGListener.h" />
+    <ClInclude Include="antlr\DZGParser.h" />
+    <ClInclude Include="antlr\DZGVisitor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="antlr\DZGLexer.tokens" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

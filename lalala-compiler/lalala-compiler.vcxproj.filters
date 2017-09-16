@@ -21,54 +21,48 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="antlr\JSONBaseListener.cpp">
+    <ClCompile Include="antlr\DZGBaseListener.cpp">
       <Filter>antlr</Filter>
     </ClCompile>
-    <ClCompile Include="antlr\JSONBaseVisitor.cpp">
+    <ClCompile Include="antlr\DZGBaseVisitor.cpp">
       <Filter>antlr</Filter>
     </ClCompile>
-    <ClCompile Include="antlr\JSONLexer.cpp">
+    <ClCompile Include="antlr\DZGLexer.cpp">
       <Filter>antlr</Filter>
     </ClCompile>
-    <ClCompile Include="antlr\JSONListener.cpp">
+    <ClCompile Include="antlr\DZGListener.cpp">
       <Filter>antlr</Filter>
     </ClCompile>
-    <ClCompile Include="antlr\JSONParser.cpp">
+    <ClCompile Include="antlr\DZGParser.cpp">
       <Filter>antlr</Filter>
     </ClCompile>
-    <ClCompile Include="antlr\JSONVisitor.cpp">
+    <ClCompile Include="antlr\DZGVisitor.cpp">
       <Filter>antlr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="antlr\JSON.g4">
+    <ClInclude Include="antlr\DZGBaseListener.h">
       <Filter>antlr</Filter>
-    </None>
-    <None Include="antlr\JSON.tokens">
+    </ClInclude>
+    <ClInclude Include="antlr\DZGBaseVisitor.h">
       <Filter>antlr</Filter>
-    </None>
-    <None Include="antlr\JSONLexer.tokens">
+    </ClInclude>
+    <ClInclude Include="antlr\DZGLexer.h">
       <Filter>antlr</Filter>
-    </None>
+    </ClInclude>
+    <ClInclude Include="antlr\DZGListener.h">
+      <Filter>antlr</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\DZGParser.h">
+      <Filter>antlr</Filter>
+    </ClInclude>
+    <ClInclude Include="antlr\DZGVisitor.h">
+      <Filter>antlr</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="antlr\JSONBaseListener.h">
+    <None Include="antlr\DZGLexer.tokens">
       <Filter>antlr</Filter>
-    </ClInclude>
-    <ClInclude Include="antlr\JSONBaseVisitor.h">
-      <Filter>antlr</Filter>
-    </ClInclude>
-    <ClInclude Include="antlr\JSONLexer.h">
-      <Filter>antlr</Filter>
-    </ClInclude>
-    <ClInclude Include="antlr\JSONListener.h">
-      <Filter>antlr</Filter>
-    </ClInclude>
-    <ClInclude Include="antlr\JSONParser.h">
-      <Filter>antlr</Filter>
-    </ClInclude>
-    <ClInclude Include="antlr\JSONVisitor.h">
-      <Filter>antlr</Filter>
-    </ClInclude>
+    </None>
   </ItemGroup>
 </Project>
