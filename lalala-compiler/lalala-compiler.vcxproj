@@ -146,6 +146,7 @@
     <ClCompile Include="antlr\DZGListener.cpp" />
     <ClCompile Include="antlr\DZGParser.cpp" />
     <ClCompile Include="antlr\DZGVisitor.cpp" />
+    <ClCompile Include="DZGLang.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -160,9 +161,14 @@
     <ClInclude Include="antlr\DZGListener.h" />
     <ClInclude Include="antlr\DZGParser.h" />
     <ClInclude Include="antlr\DZGVisitor.h" />
+    <ClInclude Include="BaseInclude.h" />
+    <ClInclude Include="DZGLang.h" />
+    <ClInclude Include="DZGLangListener.h" />
+    <ClInclude Include="DZGLangVisitor.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="antlr\DZGLexer.tokens" />
+    <None Include="example.dzg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
