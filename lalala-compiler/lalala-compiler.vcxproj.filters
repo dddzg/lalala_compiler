@@ -42,6 +42,15 @@
     <ClCompile Include="DZGLang.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="LLVMModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StringUtil.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DZGLangVisitor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="antlr\DZGBaseListener.h">
@@ -74,6 +83,12 @@
     <ClInclude Include="DZGLangListener.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="LLVMModule.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StringUtil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="antlr\DZGLexer.tokens">
@@ -81,6 +96,9 @@
     </None>
     <None Include="example.dzg">
       <Filter>资源文件</Filter>
+    </None>
+    <None Include="antlr\DZG.g4">
+      <Filter>antlr</Filter>
     </None>
   </ItemGroup>
 </Project>

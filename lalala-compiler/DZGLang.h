@@ -19,4 +19,5 @@ public:
 	void parseByListener();
 private:
 	DZGLang();
+	~DZGLang();
 };

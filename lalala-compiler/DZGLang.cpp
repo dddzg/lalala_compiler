@@ -17,3 +17,13 @@ DZGLang::DZGLang() {
 	this->visitor = new DZGLangVisitor();
 	this->listener = new DZGLangListener();
 }
+
+DZGLang::~DZGLang() {
+	delete this->input;
+	delete this->lexer;
+	delete this->tokens;
+	delete this->parser;
+	delete this->tree;
+	delete this->visitor;
+	delete this->listener;
+}
