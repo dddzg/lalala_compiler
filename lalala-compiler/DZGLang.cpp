@@ -7,6 +7,12 @@ void DZGLang::parseByListener()
 {
 	tree::ParseTreeWalker::DEFAULT.walk(this->listener, this->tree);
 }
+void DZGLang::addFunction(string name, DZGParser::FunctionDefinitionContext * ctx, DZGLangScope * scope)
+{
+	auto function = new DZGLangFunction(ctx->declarator()->getText(), ctx);
+	this->functionMap[function->name] = function;
+	this->nowFunctionName = function->name;
+}
 DZGLang::DZGLang() {
 	ifstream iFile("example.dzg");
 	this->input = new ANTLRInputStream(iFile);

@@ -1,6 +1,6 @@
 #include "DZGLangVisitor.h"
 #include "StringUtil.h"
-
+#include "DZGLang.h"
 /*
 primaryExpression
 :   Identifier
@@ -45,6 +45,15 @@ inline antlrcpp::Any DZGLangVisitor::visitPrimaryExpression(DZGParser::PrimaryEx
 	;
 */
 inline antlrcpp::Any DZGLangVisitor::visitFunctionDefinition(DZGParser::FunctionDefinitionContext * ctx) {
+	auto dzgLang = DZGLang::getInstance();
+	/*
+		增加函数名字
+		并设置为当前函数
+	*/
+	dzgLang->addFunction(ctx->declarator()->getText(), ctx);
+	/*auto function = new DZGLangFunction(ctx->declarator()->getText(), ctx);
+	dzgLang->functionMap[function->name] = function;
+	dzgLang->nowFunctionName = function->name;*/
 	cout << ctx->declarator()->getText() << endl;
 	return visitChildren(ctx);
 }

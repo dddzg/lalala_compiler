@@ -48,10 +48,10 @@
     <ClCompile Include="DZGLangVisitor.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="DZGLangBaseContent.cpp">
+    <ClCompile Include="DZGLangScope.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="DZGLangScope.cpp">
+    <ClCompile Include="DZGLangFunction.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -89,10 +89,10 @@
     <ClInclude Include="StringUtil.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="DZGLangBaseContent.h">
+    <ClInclude Include="DZGLangScope.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="DZGLangScope.h">
+    <ClInclude Include="DZGLangFunction.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
