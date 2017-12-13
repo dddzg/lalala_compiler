@@ -42,13 +42,16 @@
     <ClCompile Include="DZGLang.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="LLVMModule.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="StringUtil.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="DZGLangVisitor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DZGLangBaseContent.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DZGLangScope.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -83,10 +86,13 @@
     <ClInclude Include="DZGLangListener.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="LLVMModule.h">
+    <ClInclude Include="StringUtil.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="StringUtil.h">
+    <ClInclude Include="DZGLangBaseContent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DZGLangScope.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

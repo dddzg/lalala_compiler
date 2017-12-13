@@ -11,32 +11,39 @@ primaryExpression
 ;
 */
 inline antlrcpp::Any DZGLangVisitor::visitPrimaryExpression(DZGParser::PrimaryExpressionContext * ctx) {
-	auto constantNode = ctx->Constant();
 	/*
-	Constant
-	:   IntegerConstant
-	|   FloatingConstant
-	|   CharacterConstant
-	;
+		Identifier
+		:   IdentifierNondigit
+		(   IdentifierNondigit
+		|   Digit
+		)*
+		;
 	*/
-	if (constantNode) {
-		auto str =  constantNode->getText();
-		// char 常量 ??
-		if (StringUtil::IsChar(str)) {
-			
-			return 0;
-		}
-		// float 常量
-		if (StringUtil::IsFloat(str)) {
-			return ConstantFP::get(*(this->llvmModule->TheContext), APFloat(atof(str.c_str())));
-		}
-		// int 
-		return ConstantInt::get(*(this->llvmModule->TheContext), APInt(32,StringRef(str),10));
+	auto identifierNode = ctx->Identifier();
+	if (identifierNode) {
+		cout << "Identifier" <<identifierNode->getText() << endl;
 	}
+	/*
+		Constant
+		:   IntegerConstant
+		|   FloatingConstant
+		|   CharacterConstant
+		;
+	*/
+	auto constantNode = ctx->Constant();
+	if (constantNode) {
+		cout << "Constant" << constantNode->getText() << endl;
+	}
+
 
 	return visitChildren(ctx);
 }
 
+/*
+	functionDefinition
+	:   declarationSpecifiers? declarator declarationList? compoundStatement
+	;
+*/
 inline antlrcpp::Any DZGLangVisitor::visitFunctionDefinition(DZGParser::FunctionDefinitionContext * ctx) {
 	cout << ctx->declarator()->getText() << endl;
 	return visitChildren(ctx);
@@ -53,7 +60,6 @@ inline antlrcpp::Any DZGLangVisitor::visitCompilationUnit(DZGParser::Compilation
 
 DZGLangVisitor::DZGLangVisitor()
 {
-	this->llvmModule = LLVMModule::getInstance();
 }
 
 DZGLangVisitor::~DZGLangVisitor()

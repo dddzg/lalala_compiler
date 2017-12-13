@@ -15,7 +15,7 @@ DZGLang::DZGLang() {
 	this->parser = new DZGParser(tokens);
 	this->tree = this->parser->compilationUnit();
 	this->visitor = new DZGLangVisitor();
-	this->listener = new DZGLangListener();
+	this->listener = new DZGLangListener(/*this->lexer ÔÝÊ±²»¼Ó*/);
 }
 
 DZGLang::~DZGLang() {

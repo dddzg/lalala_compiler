@@ -149,8 +149,9 @@
     <ClCompile Include="antlr\DZGParser.cpp" />
     <ClCompile Include="antlr\DZGVisitor.cpp" />
     <ClCompile Include="DZGLang.cpp" />
+    <ClCompile Include="DZGLangBaseContent.cpp" />
+    <ClCompile Include="DZGLangScope.cpp" />
     <ClCompile Include="DZGLangVisitor.cpp" />
-    <ClCompile Include="LLVMModule.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="StringUtil.cpp" />
   </ItemGroup>
@@ -168,9 +169,10 @@
     <ClInclude Include="antlr\DZGVisitor.h" />
     <ClInclude Include="BaseInclude.h" />
     <ClInclude Include="DZGLang.h" />
+    <ClInclude Include="DZGLangBaseContent.h" />
     <ClInclude Include="DZGLangListener.h" />
+    <ClInclude Include="DZGLangScope.h" />
     <ClInclude Include="DZGLangVisitor.h" />
-    <ClInclude Include="LLVMModule.h" />
     <ClInclude Include="StringUtil.h" />
   </ItemGroup>
   <ItemGroup>

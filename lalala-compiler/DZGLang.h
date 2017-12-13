@@ -2,7 +2,8 @@
 #include "BaseInclude.h"
 #include "DZGLangListener.h"
 #include "DZGLangVisitor.h"
-class DZGLang {
+#include "DZGLangBaseContent.h"
+class DZGLang:DZGLangBaseContent {
 public:
 	static DZGLang* getInstance() {
 		static DZGLang* dzglang=new DZGLang();
