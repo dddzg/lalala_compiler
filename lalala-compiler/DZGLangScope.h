@@ -2,8 +2,9 @@
 #include "BaseInclude.h"
 class DZGLangScope {
 public:
-	DZGLangScope();
+	DZGLangScope(DZGLangScope* parent=nullptr);
 	~DZGLangScope();
 	DZGLangScope* parent;
-	map<string, tree::TerminalNode*> tokenMap;
+	map<string, pair<DZGParser::DeclarationSpecifiersContext*,DZGParser::InitDeclaratorContext*> > tokenMap;
+	void addToken(string, DZGParser::DeclarationSpecifiersContext*,DZGParser::InitDeclaratorContext*);
 };

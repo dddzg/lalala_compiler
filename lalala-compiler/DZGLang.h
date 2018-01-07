@@ -17,14 +17,18 @@ public:
 	tree::ParseTree *tree;
 	DZGLangVisitor *visitor;
 	DZGLangListener *listener;
-
 	DZGLangScope* globalScope;
 	DZGLangScope* nowScope;
 	string nowFunctionName;
+
+	DZGParser::DeclarationSpecifiersContext* nowSpecifiers;
+
 	map<string, DZGLangFunction*> functionMap;
 	void parseByVisitor();
 	void parseByListener();
 	void addFunction(string name, DZGParser::FunctionDefinitionContext * ctx, DZGLangScope* scope = nullptr);
+	DZGLangFunction* getNowFunction();
+	DZGLangScope* getNowScope();
 private:
 	DZGLang();
 	~DZGLang();

@@ -51,11 +51,9 @@ inline antlrcpp::Any DZGLangVisitor::visitFunctionDefinition(DZGParser::Function
 		并设置为当前函数
 	*/
 	dzgLang->addFunction(ctx->declarator()->getText(), ctx);
-	/*auto function = new DZGLangFunction(ctx->declarator()->getText(), ctx);
-	dzgLang->functionMap[function->name] = function;
-	dzgLang->nowFunctionName = function->name;*/
-	cout << ctx->declarator()->getText() << endl;
-	return visitChildren(ctx);
+	auto ret = visitChildren(ctx);
+	dzgLang->nowFunctionName = "";
+	return ret;
 }
 
 inline antlrcpp::Any DZGLangVisitor::visitConstantExpression(DZGParser::ConstantExpressionContext * ctx) {
@@ -64,8 +62,27 @@ inline antlrcpp::Any DZGLangVisitor::visitConstantExpression(DZGParser::Constant
 }
 
 inline antlrcpp::Any DZGLangVisitor::visitCompilationUnit(DZGParser::CompilationUnitContext * ctx) {
-	return visitChildren(ctx);
+	auto ret = visitChildren(ctx);
+	return ret;
 }
+
+antlrcpp::Any DZGLangVisitor::visitDeclaration(DZGParser::DeclarationContext * ctx)
+{
+	auto dzgLang = DZGLang::getInstance();
+	dzgLang->nowSpecifiers = ctx->declarationSpecifiers();
+	auto ret = this->visitChildren(ctx);
+	return ret;
+}
+
+antlrcpp::Any DZGLangVisitor::visitInitDeclarator(DZGParser::InitDeclaratorContext * ctx)
+{
+	auto dzgLang = DZGLang::getInstance();
+	auto nowScope = dzgLang->getNowScope();
+	nowScope->addToken(ctx->declarator()->getText(), dzgLang->nowSpecifiers, ctx);
+	return this->visitChildren(ctx);
+}
+
+
 
 DZGLangVisitor::DZGLangVisitor()
 {

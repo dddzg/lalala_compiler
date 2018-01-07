@@ -9,10 +9,29 @@ void DZGLang::parseByListener()
 }
 void DZGLang::addFunction(string name, DZGParser::FunctionDefinitionContext * ctx, DZGLangScope * scope)
 {
-	auto function = new DZGLangFunction(ctx->declarator()->getText(), ctx);
+	if (scope == nullptr) {
+		scope = new DZGLangScope(this->globalScope);
+	}
+	auto function = new DZGLangFunction(name, ctx, scope);
 	this->functionMap[function->name] = function;
 	this->nowFunctionName = function->name;
 }
+DZGLangFunction * DZGLang::getNowFunction()
+{
+	return this->functionMap[this->nowFunctionName];
+}
+
+DZGLangScope* DZGLang::getNowScope()
+{
+	auto func = this->getNowFunction();
+	if (func == nullptr) {
+		return this->globalScope;
+	}
+	else {
+		return func->scope;
+	}
+}
+
 DZGLang::DZGLang() {
 	ifstream iFile("example.dzg");
 	this->input = new ANTLRInputStream(iFile);
@@ -22,6 +41,7 @@ DZGLang::DZGLang() {
 	this->tree = this->parser->compilationUnit();
 	this->visitor = new DZGLangVisitor();
 	this->listener = new DZGLangListener(/*this->lexer ÔÝÊ±²»¼Ó*/);
+	this->globalScope = new DZGLangScope();
 }
 
 DZGLang::~DZGLang() {
